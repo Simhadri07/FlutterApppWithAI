@@ -3,7 +3,7 @@
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET"/>
-    
+
     <application
         android:label="Salary Calculator"
         android:name="${applicationName}"
@@ -26,8 +26,5 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <!-- Disable cleartext traffic (for security) -->
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 </manifest>
