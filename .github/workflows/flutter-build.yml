@@ -3,7 +3,7 @@ name: Flutter Build APK
 on:
   push:
     branches:
-      - main  # Change if needed
+      - main  # Change if using another branch
 
 jobs:
   build:
@@ -16,7 +16,13 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.x"
+          flutter-version: "3.19.x"  # Use latest stable version
+
+      - name: Create Flutter project (if missing)
+        run: |
+          if [ ! -f "pubspec.yaml" ]; then
+            flutter create .
+          fi
 
       - name: Install dependencies
         run: flutter pub get
