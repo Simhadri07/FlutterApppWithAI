@@ -3,7 +3,7 @@ name: Flutter Build APK
 on:
   push:
     branches:
-      - main  # Change if using another branch
+      - main  # Change if needed
 
 jobs:
   build:
@@ -16,11 +16,18 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.19.x"  # Use latest stable version
+          flutter-version: "3.19.x"
 
       - name: Create Flutter project (if missing)
         run: |
           if [ ! -f "pubspec.yaml" ]; then
+            flutter create .
+          fi
+
+      - name: Recreate Missing Android Folder
+        run: |
+          if [ ! -d "android" ]; then
+            rm -rf android
             flutter create .
           fi
 
