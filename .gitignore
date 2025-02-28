@@ -1,0 +1,4 @@
+.DS_Store
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
