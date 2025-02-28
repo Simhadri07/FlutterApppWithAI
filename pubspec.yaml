@@ -1,16 +1,15 @@
-name: salary_calculator
-description: A simple salary calculator Flutter app.
-publish_to: 'none' 
+name: FlutterApppWithAI
+description: A simple salary calculator app
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
